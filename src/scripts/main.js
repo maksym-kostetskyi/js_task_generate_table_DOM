@@ -370,8 +370,8 @@ people.forEach((person) => {
   name.textContent = person.name;
   tr.appendChild(name);
 
-  const gender = document.createElement('gender');
-  gender.textContent = person.gender;
+  const gender = document.createElement('td');
+  gender.textContent = person.sex === 'm' ? 'Male' : 'Female';
   tr.appendChild(gender);
 
   const born = document.createElement('td');
@@ -386,8 +386,8 @@ people.forEach((person) => {
   age.textContent = person.died - person.born;
   tr.appendChild(age);
 
-  const cenntury = document.createElement('td');
-  cenntury.textContent = Math.ceil(person.born / 100);
-  tr.appendChild(cenntury);
+  const century = document.createElement('td');
+  century.textContent = Math.ceil(person.died / 100);
+  tr.appendChild(century);
 });
 
